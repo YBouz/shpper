@@ -1,16 +1,21 @@
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { DM_Sans, Tajawal } from "next/font/google";
+import { Inter, Montserrat, Tajawal } from "next/font/google";
 import { routing, RTL_LOCALES } from "@/i18n/routing";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Toaster } from "sonner";
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["400", "500", "600", "700"],
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  weight: ["500", "600", "700", "800"],
 });
 
 const tajawal = Tajawal({
@@ -34,7 +39,9 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
   const isRtl = RTL_LOCALES.includes(locale);
-  const fontClass = isRtl ? tajawal.variable : dmSans.variable;
+  const fontClass = isRtl
+    ? `${tajawal.variable} ${montserrat.variable}`
+    : `${inter.variable} ${montserrat.variable}`;
 
   return (
     <html lang={locale} dir={isRtl ? "rtl" : "ltr"} className="h-full">
