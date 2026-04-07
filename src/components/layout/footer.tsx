@@ -34,7 +34,7 @@ export function Footer() {
             <p className="text-sm leading-relaxed text-primary-foreground/60">
               {t("description")}
             </p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               {SOCIAL_LINKS.map((social) => (
                 <a
                   key={social.label}
@@ -100,16 +100,6 @@ export function Footer() {
               {t("downloadApp")}
             </h3>
             <AppStoreButtons />
-            <div className="mt-8">
-              <Image
-                src="/images/misc/payment-icons.png"
-                alt="Accepted payment methods"
-                width={280}
-                height={40}
-                className="h-9 w-auto opacity-60"
-                sizes="280px"
-              />
-            </div>
           </div>
         </div>
 
