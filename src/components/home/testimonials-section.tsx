@@ -62,7 +62,7 @@ export function TestimonialsSection() {
   const testimonial = TESTIMONIALS[current];
 
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32">
+    <section className="relative overflow-hidden py-16 sm:py-32">
       {/* Background accent */}
       <div className="absolute inset-s-0 top-1/4 size-80 rounded-full bg-secondary/5 blur-[100px]" />
 
@@ -72,7 +72,7 @@ export function TestimonialsSection() {
           description={t("testimonialsDescription")}
         />
 
-        <div className="relative mx-auto mt-16 max-w-3xl">
+        <div className="relative mx-auto mt-10 max-w-3xl sm:mt-16">
           {/* Quote icon */}
           <div className="absolute -top-6 inset-s-0 z-10">
             <div className="inline-flex size-12 items-center justify-center rounded-2xl bg-secondary text-secondary-foreground shadow-lg shadow-secondary/30">
@@ -81,7 +81,7 @@ export function TestimonialsSection() {
           </div>
 
           {/* Card */}
-          <div className="overflow-hidden rounded-3xl border border-border bg-background p-8 pt-10 shadow-lg sm:p-12 sm:pt-14">
+          <div className="overflow-hidden rounded-3xl border border-border bg-background p-5 pt-8 shadow-lg sm:p-12 sm:pt-14">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={current}

@@ -24,7 +24,7 @@ export function PressSection() {
           {t("asSeenOn")}
         </p>
 
-        <div className="grid grid-cols-3 items-center gap-8 sm:grid-cols-6 sm:gap-12">
+        <div className="grid grid-cols-3 items-center gap-x-6 gap-y-6 sm:grid-cols-6 sm:gap-12">
           {PRESS_LOGOS.map((logo, index) => (
             <motion.div
               key={logo.name}

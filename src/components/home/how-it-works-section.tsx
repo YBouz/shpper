@@ -22,7 +22,7 @@ export function HowItWorksSection() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-16 sm:py-32">
       <Container>
         <SectionHeader
           title={t("howItWorksTitle")}
@@ -117,7 +117,7 @@ export function HowItWorksSection() {
         </div>
 
         {/* Mobile: card grid */}
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:hidden">
+        <div className="mt-10 grid gap-4 sm:mt-16 sm:grid-cols-2 sm:gap-6 lg:hidden">
           {STEPS.map((step, index) => (
             <motion.div
               key={step.key}
@@ -125,12 +125,12 @@ export function HowItWorksSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group rounded-2xl border border-border bg-background p-6 text-center transition-all hover:border-secondary/40 hover:shadow-lg"
+              className="group rounded-2xl border border-border bg-background p-4 text-center transition-all hover:border-secondary/40 hover:shadow-lg sm:p-6"
             >
               <div className="mx-auto mb-4 inline-flex size-9 items-center justify-center rounded-full bg-secondary text-sm font-bold text-secondary-foreground shadow-md shadow-secondary/30">
                 {index + 1}
               </div>
-              <div className="relative mx-auto h-44 w-32 overflow-hidden rounded-2xl bg-linear-to-b from-muted to-muted/30">
+              <div className="relative mx-auto h-36 w-28 overflow-hidden rounded-2xl bg-linear-to-b from-muted to-muted/30 sm:h-44 sm:w-32">
                 <Image
                   src={`${imageDir}/${step.image}`}
                   alt={t(`${step.key}Title`)}

@@ -62,7 +62,7 @@ export function HeroSection() {
         />
       </div>
 
-      <Container className="relative py-20 sm:py-28 lg:py-36">
+      <Container className="relative py-14 sm:py-28 lg:py-36">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Text content */}
           <div className="max-w-xl">
@@ -102,7 +102,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="mt-10"
+              className="mt-8 sm:mt-10"
             >
               <AppStoreButtons />
             </motion.div>
@@ -112,7 +112,7 @@ export function HeroSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="mt-12 flex gap-8 border-t border-white/10 pt-8"
+              className="mt-8 flex gap-8 border-t border-white/10 pt-6 sm:mt-12 sm:pt-8"
             >
               {[
                 { value: 50, suffix: "+", label: "Countries" },

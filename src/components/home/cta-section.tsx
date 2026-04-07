@@ -10,7 +10,7 @@ export function CtaSection() {
   const t = useTranslations("Home");
 
   return (
-    <section className="relative overflow-hidden bg-primary py-24 text-primary-foreground sm:py-32">
+    <section className="relative overflow-hidden bg-primary py-16 text-primary-foreground sm:py-32">
       {/* Animated gradient background */}
       <motion.div
         animate={{

@@ -42,7 +42,7 @@ export function LoyaltySection() {
   const t = useTranslations("Home");
 
   return (
-    <section className="relative overflow-hidden bg-muted/50 py-24 sm:py-32">
+    <section className="relative overflow-hidden bg-muted/50 py-16 sm:py-32">
       {/* Decorative background shapes */}
       <motion.div
         animate={{ rotate: 360 }}
@@ -56,7 +56,7 @@ export function LoyaltySection() {
           description={t("loyaltyDescription")}
         />
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-4 sm:mt-16 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {TIERS.map((tier, index) => (
             <motion.div
               key={tier.key}

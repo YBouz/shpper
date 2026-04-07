@@ -16,7 +16,7 @@ export function TravelerSection() {
   const t = useTranslations("Home");
 
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32">
+    <section className="relative overflow-hidden py-16 sm:py-32">
       {/* Background accent */}
       <motion.div
         animate={{
@@ -28,7 +28,7 @@ export function TravelerSection() {
       />
 
       <Container className="relative">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="grid items-center gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Text */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

@@ -87,18 +87,9 @@ export function Header() {
               <Menu className="size-5" />
               <span className="sr-only">{t("menu")}</span>
             </SheetTrigger>
-            <SheetContent side="right" className="w-80">
+            <SheetContent side="right" className="w-80 gap-0">
               <SheetTitle className="sr-only">{t("menu")}</SheetTitle>
-              <div className="flex flex-col gap-2 pt-8">
-                <Image
-                  src="/images/brand/logo-yellow.png"
-                  alt="Shpper"
-                  width={120}
-                  height={36}
-                  className="mb-6 ms-4 w-28"
-                  sizes="120px"
-                  style={{ height: "auto" }}
-                />
+              <div className="flex flex-col gap-2 pt-2">
                 <nav className="flex flex-col gap-1">
                   {NAV_LINKS.map((link) => (
                     <Link

@@ -89,9 +89,9 @@ export function HighlightsSection() {
   const t = useTranslations("Home");
 
   return (
-    <section className="bg-muted/50 py-24 sm:py-32">
+    <section className="bg-muted/50 py-16 sm:py-32">
       <Container>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {HIGHLIGHTS.map((item, index) => (
             <ParallaxCard
               key={item.key}
