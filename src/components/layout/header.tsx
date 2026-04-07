@@ -87,41 +87,62 @@ export function Header() {
               <Menu className="size-5" />
               <span className="sr-only">{t("menu")}</span>
             </SheetTrigger>
-            <SheetContent side="right" className="w-80 gap-0">
+            <SheetContent side="right" className="w-80 gap-0 border-white/10 bg-primary" showCloseButton={false}>
               <SheetTitle className="sr-only">{t("menu")}</SheetTitle>
-              <div className="flex flex-col gap-2 pt-2">
-                <nav className="flex flex-col gap-1">
+
+              {/* Custom close button for dark bg */}
+              <button
+                onClick={() => setOpen(false)}
+                className="absolute inset-e-3 top-3 flex size-9 items-center justify-center rounded-full text-white/50 transition-colors hover:bg-white/10 hover:text-white"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                <span className="sr-only">Close</span>
+              </button>
+
+              <div className="flex flex-col gap-2 pt-4">
+                <Image
+                  src="/images/brand/logo-yellow.png"
+                  alt="Shpper"
+                  width={120}
+                  height={36}
+                  className="mb-4 ms-4 w-24"
+                  sizes="120px"
+                  style={{ height: "auto" }}
+                />
+                <nav className="flex flex-col gap-1 px-2">
                   {NAV_LINKS.map((link) => (
                     <Link
                       key={link.key}
                       href={link.href}
                       onClick={() => setOpen(false)}
-                      className={`rounded-xl px-4 py-3.5 text-base font-medium transition-colors ${
+                      className={`rounded-xl px-4 py-3 text-base font-medium transition-colors ${
                         pathname === link.href
-                          ? "bg-primary text-primary-foreground"
-                          : "text-foreground/70 hover:bg-muted hover:text-foreground"
+                          ? "bg-secondary text-secondary-foreground"
+                          : "text-white/70 hover:bg-white/10 hover:text-white"
                       }`}
                     >
                       {t(link.key)}
                     </Link>
                   ))}
                 </nav>
-                <div className="mt-4 flex flex-col gap-3 px-4">
+                <div className="mt-4 border-t border-white/10 px-4 pt-4">
                   <button
                     onClick={() => {
                       switchLocale();
                       setOpen(false);
                     }}
-                    className="flex items-center gap-2 rounded-xl py-2.5 text-sm font-medium text-foreground/70"
+                    className="flex items-center gap-2 rounded-xl py-2.5 text-sm font-medium text-white/60 transition-colors hover:text-white"
                   >
                     <Globe className="size-4" />
                     {locale === "en" ? "العربية" : "English"}
                   </button>
+                </div>
+                <div className="mt-auto px-4 pb-8">
                   <a
                     href="https://play.google.com/store/apps/details?id=com.shpper.app"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex h-12 items-center justify-center rounded-full bg-secondary text-base font-semibold text-secondary-foreground shadow-sm transition-colors hover:bg-secondary/90"
+                    className="inline-flex h-12 w-full items-center justify-center rounded-full bg-secondary text-base font-semibold text-secondary-foreground shadow-lg shadow-secondary/20 transition-colors hover:bg-secondary/90"
                   >
                     {t("signup")}
                   </a>

@@ -133,7 +133,46 @@ export function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Product carousel collage */}
+          {/* Mobile carousel — single card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-col items-center lg:hidden"
+          >
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={current}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.35 }}
+                className="overflow-hidden rounded-2xl border-2 border-white/15 shadow-2xl shadow-black/40"
+              >
+                <Image
+                  src={mainImage}
+                  alt="Shopping product"
+                  width={200}
+                  height={266}
+                  className="h-64 w-48 object-cover sm:h-72 sm:w-56"
+                  sizes="(max-width: 640px) 200px, 224px"
+                />
+              </motion.div>
+            </AnimatePresence>
+            <div className="mt-3 flex justify-center gap-1.5">
+              {PRODUCTS.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrent(i)}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${
+                    i === current ? "w-5 bg-secondary" : "w-1.5 bg-white/20"
+                  }`}
+                />
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Desktop carousel collage */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
