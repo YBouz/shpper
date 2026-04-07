@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "WebSearch",
+      "WebFetch(domain:*)"
+    ],
+    "deny": ["Bash(git push --force*)"],
+    "defaultMode": "bypassPermissions"
+  }
+}

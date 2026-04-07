@@ -1,0 +1,53 @@
+Download all image assets from shpper.com to c:\Users\user\Dev\shpper\public\images\
+
+Create these subdirectories and download the following files using curl via Bash:
+
+Directory: public/images/brand/
+- https://www.shpper.com/wp-content/uploads/2025/10/Shpper-Logo.png → logo-white.png
+- https://www.shpper.com/wp-content/uploads/2025/10/Shpper-Logo-With-Yellow.png → logo-yellow.png
+
+Directory: public/images/how-it-works/
+- https://www.shpper.com/wp-content/uploads/2026/02/how-shpper-works-One.png → step-1.png
+- https://www.shpper.com/wp-content/uploads/2026/02/How-Shpper-Works-Two.png → step-2.png
+- https://www.shpper.com/wp-content/uploads/2026/02/How-Shpper-Works-Three.png → step-3.png
+- https://www.shpper.com/wp-content/uploads/2026/02/How-Shpper-Works-Four.png → step-4.png
+
+Directory: public/images/how-it-works/ar/
+- https://www.shpper.com/wp-content/uploads/2026/03/Send-a-Request.png → step-1.png
+- https://www.shpper.com/wp-content/uploads/2026/03/Secure.png → step-2.png
+- https://www.shpper.com/wp-content/uploads/2026/03/Delivery.png → step-3.png
+- https://www.shpper.com/wp-content/uploads/2026/03/Concierge.png → step-4.png
+
+Directory: public/images/highlights/
+- https://www.shpper.com/wp-content/uploads/2026/02/Global-Market.webp → global-market.webp
+- https://www.shpper.com/wp-content/uploads/2026/02/Mobile-First.webp → mobile-first.webp
+- https://www.shpper.com/wp-content/uploads/2026/02/Eco-Friendly.webp → eco-friendly.webp
+
+Directory: public/images/about/
+- https://www.shpper.com/wp-content/uploads/2026/01/The-Future-of-Personalized-Shipping-Shopping-image-scaled.webp → hero.webp
+- https://www.shpper.com/wp-content/uploads/2026/01/Group-395.webp → globe-phone.webp
+
+Directory: public/images/press/
+- https://www.shpper.com/wp-content/uploads/2026/02/Streetinsider.png → streetinsider.png
+- https://www.shpper.com/wp-content/uploads/2026/02/Ap.png → ap-news.png
+- https://www.shpper.com/wp-content/uploads/2026/02/The-Globe-And-Mail.png → globe-and-mail.png
+- https://www.shpper.com/wp-content/uploads/2026/02/Benzinga.png → benzinga.png
+- https://www.shpper.com/wp-content/uploads/2026/02/Digital-Journal.png → digital-journal.png
+- https://www.shpper.com/wp-content/uploads/2026/02/business-Insider.png → business-insider.png
+
+Directory: public/images/store/
+- https://www.shpper.com/wp-content/uploads/2025/10/google-donwload.png → google-play.png
+- https://www.shpper.com/wp-content/uploads/2025/10/appstore.png → app-store.png
+
+Directory: public/images/misc/
+- https://www.shpper.com/wp-content/uploads/2025/10/Payment-Icons.png → payment-icons.png
+
+Directory: public/images/products/ (carousel images)
+- https://www.shpper.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-16.55.50.jpeg → product-1.jpeg
+- https://www.shpper.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-16.55.51.jpeg → product-2.jpeg
+- https://www.shpper.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-16.55.51-1.jpeg → product-3.jpeg
+- https://www.shpper.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-16.55.51-2.jpeg → product-4.jpeg
+- https://www.shpper.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-16.55.52.jpeg → product-5.jpeg
+- https://www.shpper.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-16.55.52-1.jpeg → product-6.jpeg
+
+First create all directories with mkdir -p, then download all files in parallel using curl. Use the -L flag for redirects and -o for output filename. Report how many succeeded vs failed.
