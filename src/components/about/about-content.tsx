@@ -75,7 +75,7 @@ export function AboutContent() {
                 transition={{ repeat: Infinity, duration: 60, ease: "linear" }}
                 className="absolute inset-0 rounded-full border border-dashed border-white/6"
               />
-              <div className="relative aspect-square">
+              <div className="relative aspect-square overflow-hidden rounded-full">
                 <Image
                   src="/images/about/globe-phone.webp"
                   alt="Shpper global shopping platform"
