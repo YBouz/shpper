@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Container } from "@/components/shared/container";
 import { SectionHeader } from "@/components/shared/section-header";
+import { TiltCard } from "@/components/shared/tilt-card";
 import { Crown, Medal, Award, Gem } from "lucide-react";
 
 const TIERS = [
@@ -63,8 +64,8 @@ export function LoyaltySection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`group relative overflow-hidden rounded-2xl bg-background p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${tier.glow}`}
             >
+            <TiltCard className={`group relative overflow-hidden rounded-2xl bg-background p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${tier.glow}`}>
               {/* Shimmer gradient top bar */}
               <div
                 className={`absolute inset-x-0 top-0 h-1 bg-linear-to-r ${tier.gradient}`}
@@ -82,6 +83,7 @@ export function LoyaltySection() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {t(`${tier.key}Description`)}
               </p>
+            </TiltCard>
             </motion.div>
           ))}
         </div>

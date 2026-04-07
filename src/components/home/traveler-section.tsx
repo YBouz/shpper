@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Container } from "@/components/shared/container";
+import { TiltCard } from "@/components/shared/tilt-card";
 import { Map, LayoutDashboard, MessageSquare, ArrowRight } from "lucide-react";
 
 const FEATURES = [
@@ -69,8 +70,8 @@ export function TravelerSection() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
                 whileHover={{ x: 6 }}
-                className="group flex items-start gap-5 rounded-2xl border border-border bg-background p-6 transition-all duration-300 hover:border-secondary/30 hover:shadow-lg hover:shadow-secondary/5"
               >
+              <TiltCard className="group flex items-start gap-5 rounded-2xl border border-border bg-background p-6 transition-all duration-300 hover:border-secondary/30 hover:shadow-lg hover:shadow-secondary/5">
                 <div
                   className={`flex size-12 shrink-0 items-center justify-center rounded-2xl ${feature.color} text-white shadow-lg`}
                 >
@@ -83,6 +84,7 @@ export function TravelerSection() {
                   </p>
                 </div>
                 <ArrowRight className="mt-1 size-4 shrink-0 text-muted-foreground/30 transition-all group-hover:translate-x-1 group-hover:text-secondary" />
+              </TiltCard>
               </motion.div>
             ))}
           </div>

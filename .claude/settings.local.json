@@ -39,7 +39,9 @@
       "Bash(curl -L -o product-1.jpeg \"https://www.shpper.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-16.55.50.jpeg\")",
       "Bash(curl -L -o product-2.jpeg \"https://www.shpper.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-16.55.51.jpeg\")",
       "Bash(curl -L -o product-3.jpeg \"https://www.shpper.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-16.55.51-1.jpeg\")",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(curl -L -o product-4.jpeg \"https://www.shpper.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-16.55.51-2.jpeg\")",
+      "Bash(curl -L -o product-5.jpeg \"https://www.shpper.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-16.55.52.jpeg\")"
     ]
   }
 }
