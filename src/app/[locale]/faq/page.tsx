@@ -3,12 +3,20 @@ import { getTranslations } from "next-intl/server";
 import { FaqContent } from "@/components/faq/faq-content";
 import { JsonLd } from "@/components/shared/json-ld";
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations("Faq");
   return {
     title: t("title"),
     description: t("description"),
-    alternates: { canonical: "/faq" },
+    alternates: {
+      canonical: `/${locale}/faq`,
+      languages: { en: "/en/faq", ar: "/ar/faq" },
+    },
   };
 }
 

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | Shpper",
   },
   description:
-    "Experience personalized global shopping with Shpper. Connect with travelers worldwide and access unique products seamlessly.",
+    "Buy products from anywhere in the world, delivered by real travelers. Shpper is a peer-to-peer shopping platform based in Dubai connecting buyers with travelers globally.",
   metadataBase: new URL(BASE_URL),
   keywords: [
     "global shopping",
@@ -24,6 +24,12 @@ export const metadata: Metadata = {
     "concierge service",
     "international shopping",
     "traveler marketplace",
+    "Dubai shopping app",
+    "shop from abroad",
+    "traveler delivery",
+    "sustainable shipping",
+    "luxury concierge",
+    "cross border shopping",
   ],
   authors: [{ name: "SHPPER Software Design FZCO" }],
   creator: "Shpper",
@@ -34,13 +40,13 @@ export const metadata: Metadata = {
     locale: "en",
     title: "Shpper — Your Global Personal Shopper",
     description:
-      "Connect with travelers worldwide. Access unique products from anywhere through a simple, modern, and trustworthy experience.",
+      "Buy products from anywhere in the world, delivered by real travelers. A peer-to-peer shopping platform based in Dubai.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Shpper — Your Global Personal Shopper",
     description:
-      "Connect with travelers worldwide. Access unique products seamlessly.",
+      "Buy products from anywhere in the world, delivered by real travelers. A peer-to-peer shopping platform based in Dubai.",
   },
   robots: {
     index: true,

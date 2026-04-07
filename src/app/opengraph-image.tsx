@@ -89,8 +89,8 @@ export default function Image() {
             fontFamily: "sans-serif",
           }}
         >
-          Connect with travelers worldwide. Access unique products from
-          anywhere through a simple, modern experience.
+          Buy products from anywhere in the world, delivered by real
+          travelers. Simple, secure, and personal.
         </div>
 
         {/* Stats */}

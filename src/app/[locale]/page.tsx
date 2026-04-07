@@ -12,9 +12,19 @@ import { JsonLd } from "@/components/shared/json-ld";
 
 const BASE_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://shpper.com";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    alternates: {
+      canonical: `/${locale}`,
+      languages: { en: "/en", ar: "/ar" },
+    },
+  };
+}
 
 const organizationLd = {
   "@context": "https://schema.org",

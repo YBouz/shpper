@@ -8,13 +8,32 @@ type Props = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
+const LEGAL_DESCRIPTIONS: Record<string, string> = {
+  "privacy-policy":
+    "How Shpper collects, uses, and protects your personal data. Read our full privacy policy.",
+  "cookie-policy":
+    "How Shpper uses cookies and similar technologies on our website and app.",
+  "terms-conditions":
+    "The terms and conditions governing your use of the Shpper platform and services.",
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const page = LEGAL_PAGES[slug];
   if (!page) return {};
 
   const t = await getTranslations("Legal");
-  return { title: t(page.titleKey) };
+  return {
+    title: t(page.titleKey),
+    description: LEGAL_DESCRIPTIONS[slug],
+    alternates: {
+      canonical: `/${locale}/legal/${slug}`,
+      languages: {
+        en: `/en/legal/${slug}`,
+        ar: `/ar/legal/${slug}`,
+      },
+    },
+  };
 }
 
 export default async function LegalPage({ params }: Props) {
