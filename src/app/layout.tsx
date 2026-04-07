@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://shpper.com";
+const BASE_URL =
+  process.env.NEXT_PUBLIC_APP_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "https://shpper.bouz.me");
 
 export const metadata: Metadata = {
   title: {
@@ -31,21 +35,12 @@ export const metadata: Metadata = {
     title: "Shpper — Your Global Personal Shopper",
     description:
       "Connect with travelers worldwide. Access unique products from anywhere through a simple, modern, and trustworthy experience.",
-    images: [
-      {
-        url: "/images/about/hero.webp",
-        width: 1200,
-        height: 630,
-        alt: "Shpper — Global Personal Shopping Platform",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Shpper — Your Global Personal Shopper",
     description:
       "Connect with travelers worldwide. Access unique products seamlessly.",
-    images: ["/images/about/hero.webp"],
   },
   robots: {
     index: true,

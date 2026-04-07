@@ -8,9 +8,6 @@ export async function generateMetadata(): Promise<Metadata> {
     title: t("title"),
     description: t("heroDescription"),
     alternates: { canonical: "/about" },
-    openGraph: {
-      images: [{ url: "/images/about/hero.webp", width: 1200, height: 630 }],
-    },
   };
 }
 
