@@ -27,8 +27,9 @@ export function Footer() {
               alt="Shpper"
               width={140}
               height={44}
-              className="h-12 w-auto"
+              className="w-32"
               sizes="140px"
+              style={{ height: "auto" }}
             />
             <p className="text-sm leading-relaxed text-primary-foreground/60">
               {t("description")}
