@@ -51,7 +51,21 @@
     "asSeenOn": "As Seen On",
     "readyCta": "Ready to Start Shopping?",
     "readyDescription": "Join thousands of satisfied customers who trust Shpper for their international shopping needs.",
-    "downloadApp": "Download the App"
+    "downloadApp": "Download the App",
+    "testimonialsTitle": "What Our Users Say",
+    "testimonialsDescription": "Real stories from buyers and travelers who use Shpper every day.",
+    "testimonial1Name": "Sara A.",
+    "testimonial1Role": "Buyer from Dubai",
+    "testimonial1Text": "I ordered a limited edition perfume from Paris through Shpper. The traveler was amazing — communicated the whole way. Got it within a week of their return!",
+    "testimonial2Name": "Mohammed K.",
+    "testimonial2Role": "Traveler",
+    "testimonial2Text": "I travel for work monthly and Shpper lets me earn extra on every trip. The app is easy to use and payments come through quickly after delivery.",
+    "testimonial3Name": "Fatima H.",
+    "testimonial3Role": "Buyer from Abu Dhabi",
+    "testimonial3Text": "The concierge service is a game-changer for luxury items. They handled everything — sourcing, quality check, and delivery. Worth every dirham.",
+    "testimonial4Name": "Raj D.",
+    "testimonial4Role": "Traveler & Buyer",
+    "testimonial4Text": "I use Shpper both ways — as a traveler when I fly and as a buyer when I want something from abroad. The community is genuinely helpful."
   },
   "About": {
     "title": "About Us",

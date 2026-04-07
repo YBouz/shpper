@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/shared/container";
 import { AppStoreButtons } from "@/components/shared/app-store-buttons";
 import { Sparkles } from "lucide-react";
+import { AnimatedCounter } from "@/components/shared/animated-counter";
 
 export function HeroSection() {
   const t = useTranslations("Home");
@@ -97,21 +98,33 @@ export function HeroSection() {
               <AppStoreButtons />
             </motion.div>
 
-            {/* Stats row */}
+            {/* Stats row — animated counters */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="mt-12 flex gap-8"
+              className="mt-12 flex gap-8 border-t border-white/10 pt-8"
             >
               {[
-                { value: "50+", label: "Countries" },
-                { value: "10K+", label: "Users" },
-                { value: "4.8", label: "App Rating" },
+                { value: 50, suffix: "+", label: "Countries" },
+                { value: 10, suffix: "K+", label: "Users" },
+                { value: 4.8, suffix: "", label: "App Rating", isDecimal: true },
               ].map((stat) => (
                 <div key={stat.label}>
-                  <p className="text-2xl font-bold text-secondary">{stat.value}</p>
-                  <p className="text-xs text-primary-foreground/40">{stat.label}</p>
+                  <p className="text-2xl font-bold text-secondary">
+                    {"isDecimal" in stat && stat.isDecimal ? (
+                      "4.8"
+                    ) : (
+                      <AnimatedCounter
+                        value={stat.value}
+                        suffix={stat.suffix}
+                        duration={2}
+                      />
+                    )}
+                  </p>
+                  <p className="text-xs font-medium text-primary-foreground/40">
+                    {stat.label}
+                  </p>
                 </div>
               ))}
             </motion.div>
