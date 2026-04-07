@@ -17,37 +17,49 @@ const PRESS_LOGOS = [
 export function PressSection() {
   const t = useTranslations("Home");
 
+  // Duplicate for seamless loop
+  const logos = [...PRESS_LOGOS, ...PRESS_LOGOS];
+
   return (
-    <section className="border-y border-border py-16 sm:py-20">
+    <section className="overflow-hidden border-y border-border bg-muted/30 py-14 sm:py-16">
       <Container>
-        <p className="mb-10 text-center text-sm font-semibold uppercase tracking-widest text-muted-foreground">
+        <p className="mb-8 text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
           {t("asSeenOn")}
         </p>
+      </Container>
+
+      {/* Infinite marquee */}
+      <div className="relative">
+        {/* Fade edges */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-linear-to-r from-background to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-linear-to-l from-background to-transparent" />
 
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-wrap items-center justify-center gap-10 sm:gap-14"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            repeat: Infinity,
+            duration: 30,
+            ease: "linear",
+          }}
+          className="flex w-max items-center gap-16"
         >
-          {PRESS_LOGOS.map((logo) => (
+          {logos.map((logo, i) => (
             <div
-              key={logo.name}
-              className="opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+              key={`${logo.name}-${i}`}
+              className="flex shrink-0 items-center opacity-40 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
             >
               <Image
                 src={logo.src}
                 alt={logo.name}
                 width={140}
                 height={48}
-                className="h-7 w-auto sm:h-9"
+                className="h-8 w-auto"
                 sizes="140px"
               />
             </div>
           ))}
         </motion.div>
-      </Container>
+      </div>
     </section>
   );
 }
